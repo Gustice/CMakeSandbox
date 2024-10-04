@@ -2,6 +2,7 @@
 
 #include "Config.h"
 #include "statLib.hpp"
+#include "sharedLib.hpp"
 
 const char * myString = ProjectDefined_String;
 const int myNumber = ProjectDefined_Number;
@@ -19,6 +20,9 @@ int main(int argc, char const *argv[])
 
     std::cout << ("## Static Library is used \n");
     Lib_Helper();
+
+    std::cout << ("## Shared-Library is used \n");
+    Shr_InitCore();
 
     return 0;
 }

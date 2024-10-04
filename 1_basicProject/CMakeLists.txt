@@ -34,4 +34,5 @@ target_include_directories(BasicProj PUBLIC
 
 target_link_libraries(BasicProj PRIVATE 
     staticLibrary
+    sharedLibrary
 )
