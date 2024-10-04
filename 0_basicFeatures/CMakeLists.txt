@@ -57,3 +57,4 @@ set(someGlobal "newValue" PARENT_SCOPE)
 #
 
 # NOTE: if(${var}) always dereferences variable / if(var) conditionally dereferences it
+#   if(DEFINED ... ) to make intention clearer

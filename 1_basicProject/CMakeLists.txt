@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 
 project(BasicProj VERSION 1.0)
+message("### Project: " ${PROJECT_NAME} " " ${PROJECT_VERSION})
 
 # todo 
 # CMAKE_MESSAGE_CONTEXT
@@ -8,6 +9,8 @@ project(BasicProj VERSION 1.0)
 # CMAKE_VERBOSE_MAKEFILE
 
 set(CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
 set(EXPORT_COMPILE_COMMANDS ON)
 
 # Option can be set in GUI or by command-Line cmake ../proj -DUSE_FLAG=ON
@@ -35,4 +38,5 @@ target_include_directories(BasicProj PUBLIC
 target_link_libraries(BasicProj PRIVATE 
     staticLibrary
     sharedLibrary
+    interfaceImplementation
 )
