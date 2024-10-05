@@ -4,6 +4,7 @@
 #include "statLib.hpp"
 #include "sharedLib.hpp"
 #include "interfaceImplLib.hpp"
+#include "objectLib.hpp"
 
 const char * myString = ProjectDefined_String;
 const int myNumber = ProjectDefined_Number;
@@ -28,6 +29,9 @@ int main(int argc, char const *argv[])
     std::cout << ("## Interface implementation is used \n");
     IntImpl inst;
     inst.doSome();
+
+    std::cout << ("## Object Library implementation is used \n");
+    Obj_Helper();
 
     return 0;
 }
