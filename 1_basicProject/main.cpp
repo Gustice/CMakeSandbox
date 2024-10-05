@@ -1,10 +1,12 @@
 #include <iostream>
+#include <string>
 
 #include "Config.h"
 #include "statLib.hpp"
 #include "sharedLib.hpp"
 #include "interfaceImplLib.hpp"
 #include "objectLib.hpp"
+#include "externLib.hpp"
 
 const char * myString = ProjectDefined_String;
 const int myNumber = ProjectDefined_Number;
@@ -33,6 +35,11 @@ int main(int argc, char const *argv[])
     std::cout << ("## Object Library implementation is used \n");
     Obj_Helper();
 
+    std::cout << ("## Extern Object is used \n");
+    auto extInt = Ext_getConst();
+    auto extSign = std::string{Ext_getSignature()};
+    std::cout << "  External Library " << extSign << " returned=" << extInt << "\n";
+    
     return 0;
 }
 

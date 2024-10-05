@@ -30,6 +30,7 @@ add_executable(BasicProj main.cpp)
 configure_file(Config.h.in Config.h) # @..@ Variables will be replaced
 
 add_subdirectory(modules)
+
 # include directory of binary-dir in order to make configfile-output visible
 target_include_directories(BasicProj PRIVATE 
                 ${PROJECT_BINARY_DIR} # Add Root (Config File is placed here)
@@ -40,4 +41,6 @@ target_link_libraries(BasicProj PRIVATE
     sharedLibrary
     interfaceImplementation
     objectUsedLibrary
+    externLibraryRef
+    # externLibrary # if workaround is used
 )
