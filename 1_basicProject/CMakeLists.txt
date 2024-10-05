@@ -29,7 +29,11 @@ add_executable(BasicProj main.cpp)
 # defines config-source file and output name (output will be written in binary-Tree)
 configure_file(Config.h.in Config.h) # @..@ Variables will be replaced
 
+enable_testing()
+
 add_subdirectory(modules)
+add_subdirectory(externals)
+add_subdirectory(tests)
 
 # include directory of binary-dir in order to make configfile-output visible
 target_include_directories(BasicProj PRIVATE 
